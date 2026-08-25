@@ -6,5 +6,16 @@
 
 namespace OpenTime
 {
-    namespace Core {} // Core
+    namespace Core
+    {
+        TimingModel::TimingModel()
+        {
+
+        }
+
+        TimingModel::~TimingModel()
+        {
+
+        }
+    } // Core
 } // OpenTime

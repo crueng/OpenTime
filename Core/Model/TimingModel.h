@@ -1,5 +1,4 @@
-
-
+#pragma once
 namespace OpenTime
 {
     namespace Core
@@ -8,7 +7,9 @@ namespace OpenTime
         {
         public:
             TimingModel();
+
             ~TimingModel();
+
         private:
         };
     } // Core
