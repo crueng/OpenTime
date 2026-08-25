@@ -25,6 +25,10 @@ set(SOURCE_FILES
         Widgets/CentralWidget.cpp
         Widgets/CentralWidget.h
         Widgets/CentralWidget.ui
+        Core/Model/TimingModel.cpp
+        Core/Model/TimingModel.h
+        Core/Presenter/TimingPresenter.cpp
+        Core/Presenter/TimingPresenter.h
 )
 
 add_executable(OpenTime ${SOURCE_FILES})
