@@ -12,4 +12,9 @@ namespace OpenTime
     {
         delete m_ui;
     }
+
+    void CentralWidget::connectSignals()
+    {
+        connect(m_ui->clockButton, &QPushButton::clicked, this, &CentralWidget::onClockButtonClicked);
+    }
 } // OpenTime

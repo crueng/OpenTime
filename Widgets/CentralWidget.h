@@ -17,6 +17,11 @@ namespace OpenTime
 
         ~CentralWidget() override;
 
+        void connectSignals();
+
+        signals:
+        void onClockButtonClicked();
+
     private:
         Ui::CentralWidget* m_ui;
     };

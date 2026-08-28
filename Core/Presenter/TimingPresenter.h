@@ -13,13 +13,17 @@ namespace OpenTime
             Q_OBJECT
 
         public:
-            TimingPresenter(CentralWidget* widget);
-
+            TimingPresenter(CentralWidget* view);
             ~TimingPresenter();
+
+            void connectSignals();
+
+            public slots:
+            void onClockButtonClicked();
 
         private:
             TimingModel* m_model;
-            CentralWidget* m_widget;
+            CentralWidget* m_view;
         };
     } // Core
 } // OpenTime

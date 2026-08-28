@@ -11,5 +11,20 @@ namespace OpenTime
         {
             m_uuid = QUuid::createUuid();
         }
+
+        User::~User()
+        {
+
+        }
+
+        QString & User::getUserName()
+        {
+            return m_userName;
+        }
+
+        QUuid User::getUuid() const
+        {
+            return m_uuid;
+        }
     } // Core
 } // OpenTime
