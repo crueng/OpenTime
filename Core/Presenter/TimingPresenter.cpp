@@ -17,6 +17,14 @@ namespace OpenTime
         m_user(Core::loadUserProfile())
         {
             connectSignals();
+            if (m_user.getClockMode() == User::ClockMode::LOGGED_IN)
+            {
+                m_view->setClockText("Logged In");
+            }
+            else
+            {
+                m_view->setClockText("Logged Out");
+            }
         }
 
         TimingPresenter::~TimingPresenter()
