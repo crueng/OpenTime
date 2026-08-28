@@ -13,6 +13,12 @@ namespace OpenTime
 
         }
 
+        bool TimingModel::persistUserInteraction(Utils::UserInteraction &interaction)
+        {
+            
+            return true;
+        }
+
         TimingModel::~TimingModel()
         {
 

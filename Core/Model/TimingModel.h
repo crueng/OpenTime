@@ -1,4 +1,7 @@
 #pragma once
+
+#include "../../Utils/UserInteraction.h"
+
 namespace OpenTime
 {
     namespace Core
@@ -7,6 +10,8 @@ namespace OpenTime
         {
         public:
             TimingModel();
+
+            bool persistUserInteraction(Utils::UserInteraction& interaction);
 
             ~TimingModel();
 
