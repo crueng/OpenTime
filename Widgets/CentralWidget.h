@@ -1,5 +1,7 @@
 #pragma once
 #include <QMainWindow>
+#include <QTimer>
+#include <QObject>
 
 namespace OpenTime
 {
@@ -19,10 +21,17 @@ namespace OpenTime
 
         void connectSignals();
 
+        void setTimeText(const QString& text);
+        void setClockText(const QString& text);
+
+        void updateTime();
+
         signals:
         void onClockButtonClicked();
 
     private:
+        QTimer* m_timeUpdater;
+
         Ui::CentralWidget* m_ui;
     };
 } // OpenTime

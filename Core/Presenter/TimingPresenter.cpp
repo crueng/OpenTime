@@ -10,7 +10,7 @@ namespace OpenTime
     {
         TimingPresenter::TimingPresenter(CentralWidget* widget) : m_model(new TimingModel), m_view(widget)
         {
-
+            connectSignals();
         }
 
         TimingPresenter::~TimingPresenter()
@@ -28,7 +28,7 @@ namespace OpenTime
 
         void TimingPresenter::onClockButtonClicked()
         {
-
+            m_view->setClockText("Logged in");
         }
     } // Core
 } // OpenTime
