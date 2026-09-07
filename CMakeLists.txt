@@ -22,19 +22,10 @@ find_package(Qt6 REQUIRED COMPONENTS
 
 set(SOURCE_FILES
         main.cpp
-        Widgets/CentralWidget.cpp
-        Widgets/CentralWidget.h
-        Widgets/CentralWidget.ui
-        Core/Model/TimingModel.cpp
-        Core/Model/TimingModel.h
-        Core/Presenter/TimingPresenter.cpp
-        Core/Presenter/TimingPresenter.h
-        Utils/UserInteraction.cpp
-        Utils/UserInteraction.h
-        Core/Model/User.cpp
-        Core/Model/User.h
-        Utils/UserRole.cpp
-        Utils/UserRole.h
+        Core/Presenter/TimeClockPresenter.cpp
+        Core/Presenter/TimeClockPresenter.h
+        Core/Model/TimeClockModel.cpp
+        Core/Model/TimeClockModel.h
 )
 
 add_executable(OpenTime ${SOURCE_FILES})
