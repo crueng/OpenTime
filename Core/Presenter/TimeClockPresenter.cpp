@@ -7,23 +7,30 @@
 namespace OpenTime {
     TimeClockPresenter::TimeClockPresenter()
     {
-        m_timer = std::make_unique<QTimer>();
+        m_timerThread = std::make_unique<QThread>();
+        m_timer = new QTimer();
         m_timer->setInterval(1000);
+        m_timer->moveToThread(m_timerThread.get());
         connectSignals();
-        m_timer->start();
+        m_timerThread->start();
     }
 
     TimeClockPresenter::~TimeClockPresenter()
     {
-
+        if (m_timerThread && m_timerThread->isRunning()) {
+            m_timerThread->quit();
+            m_timerThread->wait();
+        }
     }
 
     void TimeClockPresenter::connectSignals()
     {
-        connect(m_timer.get(), &QTimer::timeout, this, &TimeClockPresenter::fetchSensorData);
+        connect(m_timer, &QTimer::timeout, this, &TimeClockPresenter::readSensorData);
+        connect(m_timerThread.get(), &QThread::started, m_timer, qOverload<>(&QTimer::start));
+        connect(m_timerThread.get(), &QThread::finished, m_timer, &QObject::deleteLater);
     }
 
-    void TimeClockPresenter::fetchSensorData()
+    void TimeClockPresenter::readSensorData()
     {
 
     }

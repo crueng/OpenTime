@@ -1,6 +1,7 @@
 #include <memory>
 
 #include <QTimer>
+#include <QThread>
 
 namespace OpenTime
 {
@@ -13,11 +14,12 @@ namespace OpenTime
 
         ~TimeClockPresenter();
 
+    private slots:
+        void readSensorData();
+
     private:
         void connectSignals();
-
-    private slots:
-        void fetchSensorData();
-        std::unique_ptr<QTimer> m_timer;
+        QTimer* m_timer;
+        std::unique_ptr<QThread> m_timerThread;
     };
 } // OpenTime
