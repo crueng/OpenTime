@@ -1,6 +1,7 @@
 #pragma once
 
 #include <QStringList>
+#include <String>
 
 namespace OpenTime
 {
