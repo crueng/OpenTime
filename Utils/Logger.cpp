@@ -11,7 +11,7 @@ namespace OpenTime
 {
     Logger::Logger( uint8_t logMode) :  m_logMode(logMode)
     {
-        if (!m_logMode & 0b1 | !m_logMode & 0b10)
+        if (!(m_logMode & 0b1) | !(m_logMode & 0b10))
         {
             throw std::exception();
         }
