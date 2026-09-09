@@ -26,6 +26,8 @@ set(SOURCE_FILES
         Core/Presenter/TimeClockPresenter.h
         Core/Model/TimeClockModel.cpp
         Core/Model/TimeClockModel.h
+        Utils/Logger.cpp
+        Utils/Logger.h
 )
 
 add_executable(OpenTime ${SOURCE_FILES})
