@@ -1,7 +1,6 @@
 #pragma once
 
 #include <QStringList>
-#include <String>
 
 namespace OpenTime
 {
@@ -14,8 +13,8 @@ namespace OpenTime
         };
 
     public:
-        Logger( uint8_t logMode);
-        ~Logger();
+        Logger(QString name, uint8_t logMode);
+        ~Logger() = default;
 
         void log(const QString& logMessage);
 
@@ -24,5 +23,6 @@ namespace OpenTime
     private:
         QStringList m_logList;
         uint8_t m_logMode;
+        QString m_loggerName;
     };
 } // OpenTime

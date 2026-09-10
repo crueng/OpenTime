@@ -3,6 +3,8 @@
 #include <QTimer>
 #include <QThread>
 
+#include "../../Hardware/ESP32_S3.h"
+
 namespace OpenTime
 {
     class TimeClockPresenter : public QObject
@@ -21,5 +23,6 @@ namespace OpenTime
         void connectSignals();
         QTimer* m_timer;
         std::unique_ptr<QThread> m_timerThread;
+        Hardware::ESP32_S3 m_esp32S3;
     };
 } // OpenTime

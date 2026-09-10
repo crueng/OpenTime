@@ -18,6 +18,7 @@ find_package(Qt6 REQUIRED COMPONENTS
         Quick
         Qml
         QuickWidgets
+        SerialPort
 )
 
 set(SOURCE_FILES
@@ -28,6 +29,8 @@ set(SOURCE_FILES
         Core/Model/TimeClockModel.h
         Utils/Logger.cpp
         Utils/Logger.h
+        Hardware/ESP32_S3.cpp
+        Hardware/ESP32_S3.h
 )
 
 add_executable(OpenTime ${SOURCE_FILES})
@@ -40,4 +43,5 @@ target_link_libraries(OpenTime PRIVATE
         Qt6::Quick
         Qt6::Qml
         Qt6::QuickWidgets
+        Qt6::SerialPort
 )
