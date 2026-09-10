@@ -8,7 +8,7 @@ namespace OpenTime
     {
         enum LogMode
         {
-            CONSOLE = 0x1,
+            CONSOLE = 0x01,
             FILE = 0x10,
         };
 
