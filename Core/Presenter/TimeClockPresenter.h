@@ -7,6 +7,7 @@
 
 namespace OpenTime
 {
+    //An Class... yeahhhh
     class TimeClockPresenter : public QObject
     {
         Q_OBJECT
