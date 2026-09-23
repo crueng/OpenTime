@@ -4,6 +4,7 @@
 
 #include "../Utils/Logger.h"
 
+
 namespace Hardware
 {
     class ESP32_S3 : public QObject
