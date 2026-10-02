@@ -1,6 +1,7 @@
 #pragma once
 
 #include <QSerialPort>
+#include <QUuid>
 
 #include "../Utils/Logger.h"
 
@@ -14,8 +15,8 @@ namespace Hardware
             ESP32_S3();
 
         signals:
-
             void newActionOccurred(QUuid uuid);
+
         private:
             QSerialPort m_serialPort;
             OpenTime::Logger* m_logger;
